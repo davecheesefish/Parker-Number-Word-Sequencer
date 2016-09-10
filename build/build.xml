@@ -1,0 +1,20 @@
+<!DOCTYPE project>
+<project name="Parker Number Word Sequencer">
+	<target name="init">
+		<mkdir dir="dist" />
+	</target>
+	
+	<target name="build" depends="init" description="Builds the project to the dist directory">
+		<echo message="Starting build..." level="info" />
+		
+		<copy todir="dist">
+			<fileset dir="src"></fileset>
+		</copy>
+		
+		<echo message="Build finished." level="info" />
+	</target>
+	
+	<target name="clean">
+		<delete dir="dist" />
+	</target>
+</project>

@@ -1,0 +1,66 @@
+@font-face {
+	font-family: 'gilroy';
+	src: url('/fonts/gilroy-extrabold-webfont.eot');
+	src: url('/fonts/gilroy-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+		url('/fonts/gilroy-extrabold-webfont.woff') format('woff'),
+		url('/fonts/gilroy-extrabold-webfont.ttf') format('truetype'),
+		url('/fonts/gilroy-extrabold-webfont.svg#gilroyextrabold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'gilroy';
+	src: url('/fonts/gilroy-light-webfont.eot');
+	src: url('/fonts/gilroy-light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/gilroy-light-webfont.woff2') format('woff2'),
+		url('/fonts/gilroy-light-webfont.woff') format('woff'),
+		url('/fonts/gilroy-light-webfont.ttf') format('truetype'),
+		url('/fonts/gilroy-light-webfont.svg#gilroylight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background: #E95;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	font-family: 'gilroy', sans-serif;
+	font-size: 20px;
+	margin: 0;
+	min-height: 100%;
+	padding: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: 'gilroy';
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+#site-footer p {
+	margin: 0;
+}
+#site-footer p a {
+	color: #FFF;
+}
+
+#site-content {
+	flex-grow: 1;
+}
