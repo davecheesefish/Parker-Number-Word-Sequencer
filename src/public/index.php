@@ -19,7 +19,7 @@
 		<section id="results"></section>
 	</article>
 	<footer id="site-footer">
-		<p>&copy;2016 <a href="http://davecheesefish.com">David Prior</a>. Inspired by <a href="https://youtu.be/LYKn0yUTIU4" target="_blank">a video by Matt Parker</a>.</p>
+		<p>&copy;2016 <a href="http://davecheesefish.com">David Prior</a>. Inspired by <a href="https://youtu.be/LYKn0yUTIU4" target="_blank">a video by Matt Parker</a>. See the <a href="https://github.com/davecheesefish/Parker-Number-Word-Sequencer">source code and similar projects</a>.</p>
 	</footer>
 </body>
 </html>
