@@ -10,24 +10,49 @@
 'use strict';
 
 $(document).ready(function(){
-	var startNumber = 537;
-	
-	var speltNumber;
-	var filteredSpeltNumber;
-	var wordLength;
-	var currentNumber = startNumber;
-	while (true){
-		speltNumber = numerousness.numbers.spell(currentNumber, {digits: false, includeAnd: true}); // The number, spelt out in words.
-		filteredSpeltNumber = speltNumber.replace(/[^a-z]/g, ''); // Remove all non-alpha characters (spaces, commas and hyphens).
-		wordLength = filteredSpeltNumber.length;
-		$('#site-content').append($('<p><strong>' + currentNumber + '</strong> - ' + speltNumber + ' (' + wordLength + ' letters)</p>'));
+	/**
+	 * Calculates the sequence for the given subject number.
+	 */
+	function sequence(subject){
+		var seq = [];
 		
-		// 4 is always the end point for the sequence in English, so end if we hit it.
-		if (currentNumber == 4){
-			break;
+		var speltNumber;
+		var filteredSpeltNumber;
+		var wordLength;
+		var currentNumber = subject;
+		while (true){
+			speltNumber = numerousness.numbers.spell(currentNumber, {digits: false, includeAnd: false}); // Spell the number out in words.
+			filteredSpeltNumber = speltNumber.replace(/[^a-z]/g, ''); // Remove all non-alpha characters (spaces, commas and hyphens).
+			wordLength = filteredSpeltNumber.length; // Get the number of letters.
+			
+			seq.push({
+				number: currentNumber,
+				words: speltNumber,
+				len: wordLength
+			});
+			
+			// 4 is always the end point for the sequence in English, so end if we hit it.
+			if (currentNumber == 4){
+				break;
+			}
+			
+			// If it's not 4, set the new number to the length and keep going.
+			currentNumber = wordLength;
 		}
 		
-		// If it's not 4, set the new number to the length and keep going.
-		currentNumber = wordLength;
+		return seq;
 	}
+	
+	function onFormSubmit(e){
+		e.preventDefault();
+		
+		$('#results').empty();
+		
+		var seq = sequence($('#subject-input').val());
+		for (var i = 0; i < seq.length; ++i){
+			$('#results').append($('<p><strong>' + seq[i].number + '</strong> - ' + seq[i].words + ' (' + seq[i].len + ' letters)</p>'));
+		}
+	};
+	
+	$('#input-form').on('submit', onFormSubmit);
 });
