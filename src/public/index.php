@@ -13,7 +13,7 @@
 	</header>
 	<article id="site-content">
 		<form id="input-form">
-			<input id="subject-input" type="number" min="0" max="9999999999999999999" value="0">
+			<input id="subject-input" type="number" min="0" value="0" step="1">
 			<input type="submit">
 		</form>
 		<section id="results"></section>
