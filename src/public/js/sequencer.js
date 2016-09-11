@@ -13,7 +13,7 @@ $(document).ready(function(){
 	/**
 	 * Calculates the sequence for the given subject number.
 	 */
-	function sequence(subject, includeAnd, includePunctuation){
+	function sequence(subject, includeAnd, includePunctuation, individualDigits){
 		var seq = [];
 		
 		var speltNumber;
@@ -21,7 +21,7 @@ $(document).ready(function(){
 		var wordLength;
 		var currentNumber = subject;
 		while (true){
-			speltNumber = numerousness.numbers.spell(currentNumber, {digits: false, includeAnd: includeAnd}); // Spell the number out in words.
+			speltNumber = numerousness.numbers.spell(currentNumber, {digits: individualDigits, includeAnd: includeAnd}); // Spell the number out in words.
 			if (includePunctuation){
 				// Punctuation included: No filtering needed.
 				filteredSpeltNumber = speltNumber;
@@ -56,6 +56,7 @@ $(document).ready(function(){
 		var end = +$('#subject-end').val();
 		var includeAnd = !!($('#include-and').prop('checked'));
 		var includePunctuation = !!($('#include-punctuation').prop('checked'));
+		var individualDigits = !!($('#individual-digits').prop('checked'));
 		
 		// Make sure the range makes sense.
 		if (end < start){
@@ -74,7 +75,7 @@ $(document).ready(function(){
 		var seq, $section, $sequence;
 		for (var currentSubject = start; currentSubject <= end; ++currentSubject){
 			// Get sequence for the current subject.
-			seq = sequence(currentSubject, includeAnd, includePunctuation);
+			seq = sequence(currentSubject, includeAnd, includePunctuation, individualDigits);
 			
 			// Find appropriate results section to append to.
 			if (resultsSections[seq.length] !== undefined){
