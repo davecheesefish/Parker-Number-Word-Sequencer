@@ -23,5 +23,17 @@
 	<footer id="site-footer">
 		<p>&copy;2016 <a href="http://davecheesefish.com">David Prior</a>. Inspired by <a href="https://youtu.be/LYKn0yUTIU4" target="_blank">a video by Matt Parker</a>. See the <a href="https://github.com/davecheesefish/Parker-Number-Word-Sequencer">source code and similar projects</a>.</p>
 	</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-9398788-13', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </body>
 </html>
