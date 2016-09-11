@@ -13,8 +13,9 @@
 	</header>
 	<article id="site-content">
 		<form id="input-form">
-			<input id="subject-input" type="number" min="0" value="0" step="1">
-			<input type="submit">
+			<p>Sequence numbers <input id="subject-start" type="number" min="0" value="0" step="1"> to <input id="subject-end" type="number" min="0" max="1000000000000000" value="100" step="1"> <input type="submit"></p></p>
+			<p><label><input id="include-and" type="checkbox" checked="1">Include "and" after hundreds</label> <label><input id="include-punctuation" type="checkbox">Include spaces and punctuation</label>
+			<p>Recommended range no more than 10000. To calculate the sequence for one specific number, enter the same number in both inputs.</p>
 		</form>
 		<section id="results"></section>
 	</article>

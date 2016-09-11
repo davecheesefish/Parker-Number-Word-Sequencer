@@ -64,3 +64,35 @@ h1 {
 #site-content {
 	flex-grow: 1;
 }
+
+.results-section {
+	border-bottom: 2px solid #FFF;
+	margin: 1em 0;
+}
+.results-section:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+.results-section h2 {
+	font-size: 1.5em;
+}
+
+.sequence {
+	border: 1px solid #DDD;
+	float: left;
+	margin: 0.5em;
+	padding: 1em;
+}
+.sequence h3 {
+	font-size: 2em;
+	margin-bottom: 0.2em;
+	text-align: center;
+}
+.sequence ol {
+	color: #DDD;
+	list-style-type: none;
+	padding: 0;
+}
+.sequence ol li {
+}
